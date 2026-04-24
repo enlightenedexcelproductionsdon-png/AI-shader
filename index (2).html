@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Shader Generator</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>AI Shader Generator</h1>
+    <section class="panel">
+      <label for="description">Describe your shader</label>
+      <textarea id="description" rows="5" placeholder="e.g. glowing nebula with animated waves"></textarea>
+
+      <div class="row">
+        <label for="temperature">Temperature: <span id="temperatureValue">0.5</span></label>
+        <input id="temperature" type="range" min="0" max="1" step="0.01" value="0.5" />
+      </div>
+
+      <div class="actions">
+        <button id="generateBtn">Generate Shader</button>
+        <button id="downloadBtn" disabled>Download .shader</button>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Generated Shader</h2>
+      <textarea id="shaderOutput" rows="16" readonly placeholder="Your generated shader will appear here."></textarea>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
